@@ -1,5 +1,5 @@
 {% set name = "htop" %}
-{% set version = "2.0.2" %}
+{% set version = "2.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/hishamhm/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 1e93e6743dddad254fac2ad0d83b00a82173c75ecbd6ef6f7d55da690eb64b92
+  sha256: fb23275090ee5fb19266384c39c69519c8b3844b8f6444730094949c621197c0
 
 build:
   number: 0
