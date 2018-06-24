@@ -16,13 +16,14 @@ build:
 
 requirements:
   build:
-    - toolchain
     - automake
     - libtool
-    - ncurses 5.9*
+    - {{ compiler('c') }}
+  host:
+    - ncurses
 
   run:
-    - ncurses 5.9*
+    - ncurses
 
 test:
   commands:
