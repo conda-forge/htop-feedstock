@@ -30,7 +30,7 @@ test:
 
 about:
   home: https://github.com/hishamhm/htop/
-  license: GPL-2.0
+  license: GPL-2.0-or-later
   license_file: COPYING
   summary: htop is an interactive text-mode process viewer for Unix systems. It aims to be a better 'top'
 
