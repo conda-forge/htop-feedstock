@@ -6,10 +6,11 @@ set -euo pipefail
     --prefix="${PREFIX}" \
     --sysconfdir="${PREFIX}/etc" \
     --enable-cgroup \
-    --enable-delayacct \
     --enable-openvz \
     --enable-unicode \
     --enable-vserver
+
+# --enable-delayacct should be enabled once building against the CentOS 7 kernel
 
 make -j${CPU_COUNT}
 
