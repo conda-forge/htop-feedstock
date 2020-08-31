@@ -22,8 +22,7 @@ requirements:
     - pkg-config
   host:
     - ncurses
-    - libnl
-
+    - libnl  # [linux]
   run:
     - ncurses
 
