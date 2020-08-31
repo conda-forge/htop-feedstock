@@ -1,8 +1,18 @@
 #!/bin/bash
 set -euo pipefail
-export CFLAGS="-I${PREFIX}/include ${CFLAGS}"
 ./autogen.sh
-./configure --prefix=$PREFIX
-make
+
+./configure \
+    --prefix="${PREFIX}" \
+    --sysconfdir="${PREFIX}/etc" \
+    --enable-cgroup \
+    --enable-delayacct \
+    --enable-openvz \
+    --enable-unicode \
+    --enable-vserver
+
+make -j${CPU_COUNT}
+
 make check
+
 make install
