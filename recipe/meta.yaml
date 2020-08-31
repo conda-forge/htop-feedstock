@@ -18,6 +18,8 @@ requirements:
     - automake
     - libtool
     - {{ compiler('c') }}
+    - make
+    - pkg-config
   host:
     - ncurses
 
