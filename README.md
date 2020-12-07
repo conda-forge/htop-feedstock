@@ -5,11 +5,11 @@ Home: https://htop.dev/
 
 Package license: GPL-2.0-only
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/htop-feedstock/blob/master/LICENSE.txt)
 
 Summary: htop is an interactive text-mode process viewer for Unix systems. It aims to be a better 'top'
 
-
+Development: https://github.com/htop-dev/htop/
 
 Current build status
 ====================
