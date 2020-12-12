@@ -1,0 +1,22 @@
+From e306b4895fe91c6513650c792d1fcd38a43f5411 Mon Sep 17 00:00:00 2001
+From: Chris Burr <chrisburr@users.noreply.github.com>
+Date: Sat, 12 Dec 2020 11:56:47 +0100
+Subject: [PATCH] Link to librt for clock_gettime
+
+---
+ Makefile.am | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile.am b/Makefile.am
+index 09790fa4..4b1e7871 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -142,7 +142,7 @@ linux_platform_headers = \
+ 	zfs/ZfsCompressedArcMeter.h
+ 
+ if HTOP_LINUX
+-AM_LDFLAGS += -rdynamic
++AM_LDFLAGS += -rdynamic -lrt
+ myhtopplatsources = \
+ 	linux/IOPriorityPanel.c \
+ 	linux/LibSensors.c \
