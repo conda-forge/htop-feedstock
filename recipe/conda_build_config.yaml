@@ -1,0 +1,3 @@
+# Required for the definition of AT_FDCWD
+MACOSX_SDK_VERSION:        # [osx and x86_64]
+  - 10.10                  # [osx and x86_64]
