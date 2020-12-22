@@ -1,6 +1,12 @@
 #!/bin/bash
 set -euo pipefail
+set -x
+
 ./autogen.sh
+
+if [[ "${target_platform}" == linux-* ]]; then
+    export CFLAGS="$CFLAGS -lrt"
+fi
 
 ./configure \
     --prefix="${PREFIX}" \
@@ -15,7 +21,7 @@ set -euo pipefail
 make -j${CPU_COUNT}
 
 if [[ "${CONDA_BUILD_CROSS_COMPILATION-}" != "1" ]]; then
-make check
+    make check
 fi
 
 make install

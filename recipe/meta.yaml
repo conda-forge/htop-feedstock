@@ -1,5 +1,5 @@
 {% set name = "htop" %}
-{% set version = "3.0.3" %}
+{% set version = "3.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,7 @@ package:
 
 source:
   url: https://github.com/htop-dev/htop/archive/{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 725103929c925a7252b4dedeb29b3a1da86a2f74e96c50eb9ea6c8fec1942cd2
-  patches:
-    - centos6-define-opath.patch
-    - link-librt.patch
+  sha256: d8a0536ce95e3d59f8e292e73ee037033a74a8cc118fd10d22048bd4aeb61324
 
 build:
   number: 0
@@ -28,6 +25,8 @@ requirements:
     - libnl  # [linux]
   run:
     - ncurses
+  run_constrained:
+    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
 
 test:
   commands:
