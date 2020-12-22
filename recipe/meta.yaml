@@ -8,9 +8,6 @@ package:
 source:
   url: https://github.com/htop-dev/htop/archive/{{ version }}/{{ name }}-{{ version }}.tar.gz
   sha256: d8a0536ce95e3d59f8e292e73ee037033a74a8cc118fd10d22048bd4aeb61324
-  patches:
-    - centos6-define-opath.patch
-    - link-librt.patch
 
 build:
   number: 0
