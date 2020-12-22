@@ -2,6 +2,8 @@
 set -euo pipefail
 ./autogen.sh
 
+export CFLAGS="$CFLAGS -lrt"
+
 ./configure \
     --prefix="${PREFIX}" \
     --sysconfdir="${PREFIX}/etc" \
