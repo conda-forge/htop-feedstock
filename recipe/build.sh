@@ -4,7 +4,7 @@ set -x
 
 ./autogen.sh
 
-if [ "${target_platform}" = linux-* ]; then
+if [[ "${target_platform}" == linux-* ]]; then
     export CFLAGS="$CFLAGS -lrt"
 fi
 
