@@ -2,7 +2,9 @@
 set -euo pipefail
 ./autogen.sh
 
-export CFLAGS="$CFLAGS -lrt"
+if [ "${target_platform}" = linux-* ]; then
+    export CFLAGS="$CFLAGS -lrt"
+fi
 
 ./configure \
     --prefix="${PREFIX}" \
