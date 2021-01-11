@@ -1,5 +1,5 @@
 {% set name = "htop" %}
-{% set version = "3.0.4" %}
+{% set version = "3.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/htop-dev/htop/archive/{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d8a0536ce95e3d59f8e292e73ee037033a74a8cc118fd10d22048bd4aeb61324
+  sha256: 4c2629bd50895bd24082ba2f81f8c972348aa2298cc6edc6a21a7fa18b73990c
 
 build:
   number: 0
