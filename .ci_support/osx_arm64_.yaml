@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 c_compiler:
 - clang
 c_compiler_version:
-- '11'
+- '13'
 channel_sources:
 - conda-forge
 channel_targets:
@@ -11,9 +11,6 @@ channel_targets:
 macos_machine:
 - arm64-apple-darwin20.0.0
 ncurses:
-- '6.2'
-pin_run_as_build:
-  ncurses:
-    max_pin: x.x
+- '6'
 target_platform:
 - osx-arm64
