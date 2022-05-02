@@ -1,7 +1,7 @@
 c_compiler:
 - gcc
 c_compiler_version:
-- '9'
+- '10'
 cdt_name:
 - cos7
 channel_sources:
@@ -11,9 +11,6 @@ channel_targets:
 docker_image:
 - quay.io/condaforge/linux-anvil-ppc64le
 ncurses:
-- '6.2'
-pin_run_as_build:
-  ncurses:
-    max_pin: x.x
+- '6'
 target_platform:
 - linux-ppc64le
