@@ -67,31 +67,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `htop` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install htop
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install htop
 ```
 
-It is possible to list all of the versions of `htop` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add htop
+# for installing globally
+pixi global install htop
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `htop` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search htop --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search htop --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search htop --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -103,6 +145,8 @@ mamba repoquery whoneeds htop --channel conda-forge
 # List dependencies of `htop`:
 mamba repoquery depends htop --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
